@@ -23,14 +23,15 @@ else
 	USER=root
 fi
 
-useradd -G $GROUP $USER
-chown -R $USER:$GROUP /opt/JDownloader
+#useradd -G $GROUP $USER
+#chown -R $USER:$GROUP /opt/JDownloader
 
 trap stopJD2 EXIT
 
-su -c "java -Djava.awt.headless=true -jar /opt/JDownloader/JDownloader.jar &" -s /bin/bash $USER
+exec java -Djava.awt.headless=true -jar /opt/JDownloader/JDownloader.jar
+#su -c "java -Djava.awt.headless=true -jar /opt/JDownloader/JDownloader.jar &" -s /bin/bash $USER
 
-while true; do
-	sleep 3600
-done
+#while true; do
+#	sleep 3600
+#done
 
