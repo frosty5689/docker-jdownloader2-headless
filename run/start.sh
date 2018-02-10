@@ -31,6 +31,6 @@ trap stopJD2 EXIT
 su -c "java -Djava.awt.headless=true -jar /opt/JDownloader/JDownloader.jar &" -s /bin/bash $USER
 
 while true; do
-	sleep inf
+	sleep 3600
 done
 
