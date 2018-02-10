@@ -2,6 +2,11 @@ FROM frolvlad/alpine-oraclejre8:latest
 
 MAINTAINER frosty5689 <frosty5689@gmail.com>
 
+RUN apk add --no-cache --update \
+    ca-certificates \
+    tzdata \
+ && update-ca-certificates \
+
 # Create directory, downloader JD" and start JD2 for the initial update and creation of config files.
 RUN \
     apk add --no-cache --update --virtual build-dependencies wget && \
