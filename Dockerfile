@@ -2,6 +2,7 @@ FROM openjdk:8-jre-alpine
 
 MAINTAINER frosty5689 <frosty5689@gmail.com>
 
+RUN apk add --no-cache --update wget
 
 # Create directory, downloader JD" and start JD2 for the initial update and creation of config files.
 RUN \
