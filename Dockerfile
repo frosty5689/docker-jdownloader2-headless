@@ -16,4 +16,5 @@ ADD run/* /opt/JDownloader/
 VOLUME ["/opt/JDownloader/cfg", "/root/Downloads"]
 
 # Run this when the container is started
-CMD /opt/JDownloader/start.sh
+CMD ["/opt/JDownloader/start.sh"]
+
