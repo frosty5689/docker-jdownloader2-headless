@@ -14,6 +14,7 @@ RUN \
 COPY startJD2.sh /opt/JDownloader/
 RUN chmod +x /opt/JDownloader/startJD2.sh
 
+VOLUME ["/opt/JDownloader/cfg", "/root/Downloads"]
 
 # Run this when the container is started
 CMD /opt/JDownloader/startJD2.sh
